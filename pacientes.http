@@ -1,0 +1,32 @@
+@api = http://localhost:4000
+
+GET {{api}}/pacientes/
+###
+GET {{api}}/pacientes/6071e5caacd28b37643fd21a
+
+### CREATE PACIENTE
+POST {{api}}/pacientes/
+Content-Type: application/json
+
+{
+    "documento": "2231ad23",
+    "tipoDocumento" :"cc",
+    "primerNombre" :"Cucho!",
+    "segundoNombre" :"aaa2",
+    "primerApellido" :"d",
+    "segundoApellido":"f",
+    "fecNacimiento": ""
+}
+
+###
+
+DELETE {{api}}/pacientes/6071ea8ace35823fbcdfd8c5
+
+###
+
+PUT {{api}}/pacientes/6071e5caacd28b37643fd21a
+Content-Type: application/json
+
+{
+    "primerNombre": "davidD"
+}
